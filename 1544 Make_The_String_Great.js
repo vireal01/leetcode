@@ -1,7 +1,5 @@
 var makeGood = function (s) {
     let stack = []
-    const delta = Math.abs('A'.charCodeAt(0) - 'a'.charCodeAt(0))
-    let lastInStack
     for (let i of s) {
         stack.push(i)
         if (stack.length > 1) {
@@ -16,9 +14,5 @@ var makeGood = function (s) {
 };
 
 const isBad = function (last, preLast) {
-    const delta = Math.abs('A'.charCodeAt(0) - 'a'.charCodeAt(0));
-    if (Math.abs(last.charCodeAt(0) - preLast.charCodeAt(0)) === delta) {
-        return true
-    } return false
-
+    return (Math.abs(last.charCodeAt(0) - preLast.charCodeAt(0)) === 32)
 }
