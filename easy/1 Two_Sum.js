@@ -6,6 +6,20 @@
 //     }
 // }
 
+// O(n) time | O(n) space
+// var twoSum = function (nums, target) {
+//     let hash = {}
+//     for(let i = 0; i < nums.length; i++) {
+//         if(hash[nums[i]] !== undefined){
+//            return [hash[nums[i]], i]
+//        } else {
+//            hash[target - nums[i]] = i
+//        }
+//     }
+// }
+
+
+
 var twoSum = function (nums, target) {
     const map = {};
     for (let i = 0; i <= nums.length; i++) {
