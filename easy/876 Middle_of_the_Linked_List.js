@@ -25,3 +25,17 @@ var middleNode = function(head) {
         }
     return node
 };
+
+
+// better solution:
+
+//var middleNode = function(head) {
+//    let slowPointer = head
+//    let fastPointer = head
+//    
+//    while(fastPointer && fastPointer.next){
+//       slowPointer = slowPointer.next
+//        fastPointer = fastPointer.next.next
+//    }
+//    return slowPointer
+//};
