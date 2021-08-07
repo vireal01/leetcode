@@ -55,3 +55,48 @@ var isPalindrome = function(head) {
     nodeStack.shift()
     return nodeStack.length === 0
 };
+
+
+// better solution
+
+// var isPalindrome = function(head) {
+
+//     let middle = middleNode(head)
+//     let reversed = reverseList(middle)   
+    
+//     while(reversed){
+//         if(reversed.val !== head.val){
+//             return false
+//         }
+//         reversed = reversed.next
+//         head = head.next
+//     } return true
+    
+// };
+
+// function middleNode(head) {
+//     let slowPointer = head
+//     let fastPointer = head
+    
+//     while(fastPointer && fastPointer.next){
+//         slowPointer = slowPointer.next
+//         fastPointer = fastPointer.next.next
+//     }
+//     return slowPointer
+// };
+
+// function reverseList(head) {
+//     let prev = null;
+//     let current = head;
+//     let next = null;
+    
+//     while(current!== null){
+//         next = current.next
+//         current.next = prev
+//         prev = current
+//         current = next
+//     }
+//     return prev
+    
+// };
+
